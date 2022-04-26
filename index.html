@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8", name="language" content="EN", name="Marcos Pereyra - Portafolio Web" content="Marcos Pereyra, marcospereyra-1807@hotmail.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content='Portafolio Web de Marcos Pereyra. Proyecto final del curso "Argentina Programa: #YoProgramo" del Ministerio de Desarrollo Productivo'>
+        <meta name="keywords" content="programación, portafolio, fullstack, backend, frontend">
+        <title>Marcos Pereyra / Portafolio Web</title>
+        <link rel="icon" href="img/favicon.png">
+        <link href="estilos/estilo-nuevo.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/js.js"></script>
+    </head>
+
+    <body>       
+        <!-- Cabecera -->
+        <div class="header">
+            <div id="logos" style="float:left;">
+                <div>
+                    <a href="https://www.argentina.gob.ar/produccion" target="_blanck" data-title="https://www.argentina.gob.ar/produccion">
+                        <img src="img/min_desarrollo_productivo.png" alt="Ministerio de Desarrollo Productivo">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.argentina.gob.ar/latiendo/queres-capacitarte-y-estudiar/argentina-programa#:~:text=Es%20una%20pol%C3%ADtica%20p%C3%BAblica%20que,tienen%20conocimientos%20en%20el%20tema." target="_blanck" data-title="https://www.argentina.gob.ar/latiendo/queres-capacitarte-y-estudiar/argentina-programa#">
+                        <img src="img/logo argentina programa.png" alt="Argentina Programa">
+                    </a>
+                </div>
+            </div>
+            <div id="botones-usuario" style="float: right; overflow: hidden;">               
+                <a href="https://www.linkedin.com/in/marcos-pereyra-60935b1b5/" target="_blanck"><img id="linked-in" src="img/linked-in.jpg" alt="LinkedIn" style="height: 26px; margin-top: 4px;"></a>
+                
+                <div id="config">
+                    <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"></path>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#"><b>datos personales |</b></a></li>
+                        <li><a class="dropdown-item" href="#"><b>editar contenido |</b></a></li>
+                        <li><a class="dropdown-item" href="#"><b>fondo de pantalla |</b></a></li>
+                    </ul>                
+                </div>    
+                
+                <button id="log-in">login</button>
+                <button id="crear-cuenta">crear cuenta</button>
+            </div>
+        </div>
+
+
+
+        <!-- CONTENIDO DEL PERFIL -->
+        <div class="container">
+            <!-- BANNER -->
+            <div>
+                <div class="datos-y-banner">
+                    <div class="cuerpo banner">
+                        <div id="editar-portada" role="button">  
+                            <i data-visualcompletion="css-img" id="boton-editar-foto" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/a5GdAqesPRG.png&quot;); background-position: 0px -1162px; background-size: auto; width: 16px; height: 16px; background-repeat: no-repeat; display: inline-block;"></i>
+                        </div>
+                        <div>
+                            <div style="display: flex;">
+                                <img id="foto-perfil" src="img/foto_prefil.jpg" alt="Foto de perfil">       
+                                <div id="editar" role="button">  
+                                    <i data-visualcompletion="css-img" id="boton-editar-foto" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/a5GdAqesPRG.png&quot;); background-position: 0px -1162px; background-size: auto; width: 16px; height: 16px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="cuerpo datos-personales">
+                        <div style="overflow: hidden;">
+                            <h1 style="float: left;">Marcos Pereyra</h1>
+                            <div style="float: left;">
+                                <button type="button" class="boton-datos" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    <b>datos personales</b>
+                                </button>        
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">                                       
+                                            <div class="modal-header">
+                                                <h5 class="modal-title nombre" id="staticBackdropLabel"><b>DATOS PERSONALES</b></h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="dato">
+                                                    <h6><b>FECHA DE NACIMIENTO</b></h6>
+                                                        <p><b>10/07/1996</b></p>
+                                                </div>
+                                                <hr>
+                                                <div class="dato">
+                                                    <h6><b>DOMICILIO</b></h6>
+                                                        <p><b>Villa Crespo, CABA</b></p>
+                                                </div>
+                                                <hr>
+                                                <div class="dato">
+                                                    <h6><b>TELÉFONO</b></h6>
+                                                    <p><b>1165052634</b></p>
+                                                </div>
+                                                <hr>
+                                                <div class="dato">
+                                                    <h6><b>CORREO ELECTRÓNICO</b></h6>
+                                                    <p><b>marcospereyra.1807@gmail.com</b></p>
+                                                </div>
+                                                <hr>
+                                                <div class="dato">
+                                                    <h6><b>IDIOMAS</b></h6>
+                                                    <p><b>Inglés (intermedio)</b></p>
+                                                    <p><b>Francés (básico)</b></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="float: left;">
+                                <button class="boton-agregar" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                                    <b>agregar sección</b>
+                                </button>
+                                <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="modal-title"><b>NUEVA SECCIÓN</b></h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="">
+                                                    <div class="mb-3">
+                                                        <label for="validationDefault01" class="form-label"><b>TÍTULO</b></label>
+                                                        <input type="text" class="form-control" id="validationDefault01" required>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button class="btn btn-secondary" type="submit">agregar</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <!-- Acerca de -->
+            <div class="cuerpo acerca-de">
+                <div style="width:fit-content;">
+                    <h2>ACERCA DE</h2>
+                </div>
+                <div style="overflow: hidden; display: flex;">
+                    <div style="display: flex;">
+                        <p>Full Stack Developer Jr. 
+                            Estudiando programación desde comienzos de 2021, tanto en Frontend como Backend. 
+                            También soy músico y escritor.</p>
+                        <div class="botones-acciones">
+                            <img class="editar" src="img/editar.png" height="25" width="25">
+                        </div>
+                    </div>                
+                </div>                        
+            </div>
+        
+
+            <!-- Experiencia -->
+            <div class="cuerpo experiencia">
+                <div style="overflow: hidden; display: flex;">
+                    <h2>EXPERIENCIA</h2>
+                    <div class="botones-acciones add">
+                        <img class="add" src="img/agregar.png" height="25" width="25">
+                    </div>
+                </div>
+                <div style="overflow: hidden; display: flex;">
+                    <div style="display: flex;">
+                        <p>He desarrollado de forma autodidacta algunos proyectos de Frontend -una página web utilizando HTML, CSS y JavaScript- y Backend -programas que simulan un sistema bancario, una billetera virtual, entre otros-. 
+                            Me gustaría trabajar en un ambiente laboral formal para poder seguir formándome.
+                        </p>
+                        <div style="display: flex;">
+                            <div class="botones-acciones">
+                                <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                            </div>
+                            <div class="botones-acciones">
+                                <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                            </div>                
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            
+
+            <!-- Educación -->
+            <div class="cuerpo educacion">
+                <div style="overflow: hidden; display: flex;">
+                    <h2>EDUCACIÓN</h2>
+                    <div class="botones-acciones add">
+                        <img class="add" src="img/agregar.png" height="25" width="25">
+                    </div>
+                </div>
+                <div style="overflow: hidden;">
+                    <div class="contenido educacion">
+                        <div style="overflow: hidden; display: flex;">
+                            <img class="img-estudios" src="img/logo-ort.jpg" alt="logo ORT">
+                            <div style="overflow: hidden;">
+                                <h5> Escuelas Técnicas ORT </h5>
+                                <div style="display: flex;">
+                                    <p>Bachiller Técnico con orientación en Producción Musical
+                                        (Graduado con honores - Abanderado)
+                                    </p>
+                                    <div style="display: flex;">
+                                        <div class="botones-acciones">
+                                            <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                                        </div>
+                                        <div class="botones-acciones">
+                                            <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="fechas">marzo 2009 - diciembre 2014</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contenido educacion">
+                        <div style="overflow: hidden;  display: flex;">
+                            <img class="img-estudios" src="img/logo-UTN.jpg" alt="logo UTN">
+                            <div style="overflow: hidden;">
+                                <h5> Universidad Tecnológica Nacional </h5>
+                                <div style="display: flex;">
+                                    <p>Fundamentos de la Programación</p>
+                                    <div style="display: flex;">
+                                        <div class="botones-acciones">
+                                            <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                                        </div>
+                                        <div class="botones-acciones">
+                                            <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="fechas">enero 2021 - abril 2021</p>
+                                    <p><a class="certificado" href="https://drive.google.com/file/d/1z4txMe6IRC7eyib9OcxBgHplQqA6_5y6/view?usp=sharing" target="_blanck">certificado</a></p>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contenido educacion">
+                        <div style="overflow: hidden;  display: flex;">
+                            <img class="img-estudios" src="img/logo-UTN.jpg" alt="logo UTN">
+                            <div style="overflow: hidden;">
+                                <h5> Universidad Tecnológica Nacional </h5>
+                                <div style="display: flex;">
+                                    <p>Desarrollo Web con JavaScript</p>
+                                    <div style="display: flex;">
+                                        <div class="botones-acciones">
+                                            <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                                        </div>
+                                        <div class="botones-acciones">
+                                            <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="fechas">abril 2021 - junio 2021</p>
+                                <p><a class="certificado" href="https://drive.google.com/file/d/1hSEPPwoToL-pNCpDjPM4LRrHis_xQTAu/view?usp=sharing" target="_blanck">certificado</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="contenido educacion">
+                        <div style="overflow: hidden;  display: flex;">
+                            <img class="img-estudios" src="img/logo argentina programa.png" alt="logo Argentina Programa">
+                            <div style="overflow: hidden;">
+                                <h5> Ministerio de Desarrollo Productivo </h5>
+                                <div style="display: flex;">
+                                    <p>Argentina Programa: #SéProgramar</p>
+                                    <div style="display: flex;">
+                                        <div class="botones-acciones">
+                                            <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                                        </div>
+                                        <div class="botones-acciones">
+                                            <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="fechas">octubre 2021 - diciembre 2021</p>
+                                <p><a class="certificado" href="https://drive.google.com/file/d/1WvaZnOKl84GqJpp4LsyBS2nsk_xaVU9O/view?usp=sharing" target="_blanck">certificado</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contenido educacion">
+                        <div style="overflow: hidden;  display: flex;">
+                            <img class="img-estudios" src="img/logo argentina programa.png" alt="logo Argentina Programa">
+                            <div style="overflow: hidden;">
+                                <h5> Ministerio de Desarrollo Productivo </h5>
+                                <div style="display: flex;">
+                                    <p>Argentina Programa: #YoProgramo</p>
+                                    <div style="display: flex;">
+                                        <div class="botones-acciones">
+                                            <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                                        </div>
+                                        <div class="botones-acciones">
+                                            <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="fechas">febrero 2022 - agosto 2022</p>
+                                <p><a class="certificado" href="https://drive.google.com/file/d/1WvaZnOKl84GqJpp4LsyBS2nsk_xaVU9O/view?usp=sharing" target="_blanck">certificado</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+            <!-- Skills -->
+            <div class="cuerpo skills">
+                <div style="overflow: hidden; display: flex;">
+                    <h2>HARD SKILLS</h2>
+                    <div class="botones-acciones add">
+                        <img class="add" src="img/agregar.png" height="25" width="25">
+                    </div>
+                </div>
+                
+                <!-- HTML -->
+                <div>
+                    <div class="skill">
+                        <div class="skill-nombre"><b>HTML</b></div>
+                        <div style="overflow:hidden; display: flex;">
+                            <div class="skill-barra" style="float: right;">
+                                <div class="skill-porcentaje hard" per="70"></div>
+                            </div>
+                            <div class="botones-acciones">
+                                <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                            </div>
+                            <div class="botones-acciones">
+                                <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CSS -->
+                
+                <div class="skill">
+                    <div class="skill-nombre"><b>CSS</b></div>
+                    <div style="overflow:hidden; display: flex;">
+                        <div class="skill-barra" style="float: right;">
+                            <div class="skill-porcentaje hard" per="60"></div>
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                        </div>
+                    </div>
+                </div>
+            
+
+
+                <!-- ANGULAR -->
+                <div class="skill">
+                    <div class="skill-nombre"><b>ANGULAR</b></div>
+                    <div style="overflow:hidden; display: flex;">
+                        <div class="skill-barra" style="float: right;">
+                            <div class="skill-porcentaje hard" per="20"></div>
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- JAVACSRIPT -->
+                <div class="skill">
+                    <div class="skill-nombre"><b>JAVACSRIPT</b></div>
+                    <div style="overflow:hidden; display: flex;">
+                        <div class="skill-barra" style="float: right;">
+                            <div class="skill-porcentaje hard" per="60"></div>
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                        </div>
+                    </div>
+                </div>
+                
+
+
+                <!-- JAVA -->
+                <div class="skill">
+                    <div class="skill-nombre"><b>JAVA</b></div>
+                    <div style="overflow:hidden; display: flex;">
+                        <div class="skill-barra" style="float: right;">
+                            <div class="skill-porcentaje hard" per="70"></div>
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                        </div>
+                    </div>
+                </div>
+            
+
+                <!-- SQL -->
+                <div class="skill">
+                    <div class="skill-nombre"><b>SQL</b></div>
+                    <div style="overflow:hidden; display: flex;">
+                        <div class="skill-barra" style="float: right;">
+                            <div class="skill-porcentaje hard" per="80"></div>
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                        </div>
+                    </div>
+                </div>
+            
+
+                <!-- SPRING BOOT -->
+                <div class="skill">
+                    <div class="skill-nombre"><b>SPRING BOOT</b></div>
+                    <div style="overflow:hidden; display: flex;">
+                        <div class="skill-barra" style="float: right;">
+                            <div class="skill-porcentaje hard" per="50"></div>
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <div style="overflow: hidden; display: flex;">
+                    <h2>SOFT SKILLS</h2>
+                    <div class="botones-acciones add">
+                        <img class="add" src="img/agregar.png" height="25" width="25">
+                    </div>
+                </div>
+
+                <!-- INICIATIVA -->
+                <div class="skill">
+                    <div class="skill-nombre"><b>INICIATIVA</b></div>
+                    <div style="overflow:hidden; display: flex;">
+                        <div class="skill-barra" style="float: right;">
+                            <div class="skill-porcentaje soft" per="80"></div>
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TRABAJO EN EQUIPO -->
+                <div class="skill">
+                    <div class="skill-nombre"><b>TRABAJO EN EQUIPO</b></div>
+                    <div style="overflow:hidden; display: flex;">
+                        <div class="skill-barra" style="float: right;">
+                            <div class="skill-porcentaje soft" per="100"></div>
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ADAPTACIÓN -->
+                <div class="skill">
+                    <div class="skill-nombre"><b>ADAPTACIÓN</b></div>
+                    <div style="overflow:hidden; display: flex;">
+                        <div class="skill-barra" style="float: right;">
+                            <div class="skill-porcentaje soft" per="80"></div>
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                        </div>
+                        <div class="botones-acciones">
+                            <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+            <!-- Proyectos -->
+            <div class="cuerpo proyectos">
+                <div style="overflow: hidden; display: flex;">
+                    <h2>PROYECTOS</h2>
+                    <div class="botones-acciones add">
+                        <img class="add" src="img/agregar.png" height="25" width="25">
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        <div style="overflow: hidden; display: flex;">
+                            <div>
+                                <p>Portafolio Web (proyecto final - Argentina Programa)</p>
+                            </div>
+                            <div style="display: flex;">
+                                <div class="botones-acciones">
+                                    <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                                </div>
+                                <div class="botones-acciones">
+                                    <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="overflow: hidden; display: flex;">
+                            <div>
+                                <p><a href="https://marcospereyra.000webhostapp.com/Eval.%20Integradora%20-%20M%C3%B3dulo%202/index.html" target="_blanck">Página Web (proyecto final - UTN)</a></p>
+                            </div>
+                            <div style="display: flex;">
+                                <div class="botones-acciones">
+                                    <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                                </div>
+                                <div class="botones-acciones">
+                                    <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="overflow: hidden; display: flex;">
+                            <div>
+                                <p><a href="https://github.com/MarcosPereyra" target="_blanck">Perfil de GitHub</a></p>
+                            </div>
+                            <div style="display: flex;">
+                                <div class="botones-acciones">
+                                    <img class="editar" src="img/editar.png" alt="" height="25" width="25">
+                                </div>
+                                <div class="botones-acciones">
+                                    <img class="borrar" src="img/borrar.png" alt="" height="25" width="25">
+                                </div>
+                            </div>
+                        </div>                    
+                    </li>
+                </ul>        
+            </div>
+        </div> 
+            
+
+        <div id="footer">
+            <p>portafolio web realizado por <b>Marcos Pereyra</b> en 2022</p>
+        </div>
+        
+        <script>
+            $(".skill-porcentaje").each(function(){
+                var $this = $(this);
+                var per = $this.attr("per");
+                $this.css("width", per + "%");
+
+                $({animatedValue: 0}).animate({animatedValue: per},{
+                    duration: 1,
+                    complete: function(){
+                        $this.attr("per", Math.floor(this.animatedValue) + "%");
+                    }    
+                });
+            });
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>    
+</html>

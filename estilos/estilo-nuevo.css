@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Send+Flowers&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    background-color: #be7cfc !important;
+}
+
+a svg {
+    color: #dddbdb;
+}
+
+p, h1, h2, h4, h5, h6, span, b{
+    cursor: default;
+}
+
+h2 {
+    padding: 3px 7px 3px 7px;
+    border-radius: 10px;
+    /* "to left" / "to right" - affects initial color */
+    background: linear-gradient(to left, rgba(209, 211, 211, 0.863) 50%, rgba(143, 143, 143, 0.5) 50%) right;
+    background-size: 201%;
+    transition: .6s ease-out;
+}
+
+h1 {
+    padding: 0px 5px 8px 5px;
+    border-radius: 10px;
+    /* "to left" / "to right" - affects initial color */
+    background: linear-gradient(to left, rgba(209, 211, 211, 0.863) 50%, rgba(143, 143, 143, 0.5) 50%) right;
+    background-size: 200%;
+    transition: .6s ease-out;
+}
+
+h6 {
+    height: 20px;
+}
+
+.dato {
+    padding-bottom: 2px;
+}
+
+.dato p {
+    padding-left: 15px;
+    padding-top: 2px;
+}
+
+p {
+    margin-right: 10px !important;
+    width: 95%;
+}
+
+p a {
+    text-decoration: none;
+    
+    color: rgba(99, 99, 252, 0.767);
+    transition: 0.7s;
+}
+
+.datos-y-banner {
+    border-radius: 30px;
+    padding: 0px !important;
+}
+
+.header {
+    background-color: black;
+    border-bottom: 3px solid rgb(235, 232, 232) !important;
+    width: 100%;
+    position: fixed;
+    z-index: 900;   
+    top: 0px; 
+}
+
+#logos {
+    display: flex;
+    float: left;
+}
+
+#logos img {
+    height: 70px;
+}
+
+#linked-in {
+    margin-right: 25px;
+    height: 35px;
+    border-radius: 4px; 
+    margin-top: -1px;
+    cursor: pointer;
+}
+
+[data-title]:hover:after {
+    opacity: 1;
+    transition: 0.3s;
+    visibility: visible;
+}
+
+[data-title]:after {
+    content: attr(data-title);
+    background-color: rgba(223, 222, 222, 0.952);
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    padding: 1px 12px;
+    top: 20px;
+    left: 80%;
+    white-space: nowrap;
+    opacity: 0;
+    border: none;
+    z-index: 99999;
+    visibility: hidden;
+    border-radius: 3px;
+}
+
+[data-title] {
+    position: relative;
+}
+    
+#log-in, #crear-cuenta {
+    background-color: rgb(0, 0, 0);
+    color:rgb(235, 235, 235);
+    float: right;
+    padding: 4px 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-right: 20px;
+    font-weight: bolder;
+    margin-bottom: 18px;
+}
+
+#config {
+    color:rgb(235, 235, 235);
+    float: right;
+    padding: 2px 10px 4px 10px;
+    border: none;
+    height: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-right: 20px;
+}
+
+#log-in:hover, #crear-cuenta:hover, #config:hover {
+    background-color: rgba(179, 179, 179, 0.356);
+    transition: 0.7s;
+    font-weight: bold;
+    
+}
+
+.form-control-color {
+    float: right;
+    margin-right: 20px;
+    margin-top: -3px !important;
+}
+
+.banner {
+    height: 175px;
+    background-image: url("../img/kandinsky.jpg");   
+    background-size: cover;
+    border-radius: 30px 30px 0px 0px;
+}
+
+#foto-perfil {
+    float: left;
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 39px;
+    margin-left: -20px;
+    border: 3px solid rgb(209, 209, 209);
+    position: relative;
+}
+
+
+/* B O T O N E S */
+
+.dropdown-item b {
+    cursor: pointer;
+}
+
+.dropdown-item {
+    text-align: right !important;
+}
+
+#botones-usuario {
+    float: right;
+    padding-top: 20px;
+} 
+
+#editar:hover {
+    background-color: rgb(190, 186, 186);
+    transition: 0.5s;
+}
+
+#editar {
+    border-radius: 50%;
+    margin-top: 190px;
+    margin-left: -51px;
+    width: 34px;
+    height: 34px;
+    background-color: rgb(209, 209, 209);
+    z-index: 2;
+    transition: 0.5s;
+}
+
+#editar-portada {
+    border-radius: 50%;
+    height: 34px;
+    width: 34px;
+    margin-top: 142px;
+    margin-right: -90px;
+    float: right;
+    background-color: rgb(209, 209, 209);
+    z-index: 2;
+    transition: 0.5s;
+}
+
+#editar-portada:hover {
+    background-color: rgb(190, 186, 186);
+    transition: 0.5s;
+}
+
+#boton-editar-foto {
+    position: relative;
+    left:9px;
+    top: 7px;
+}
+
+.boton-datos {
+    color: rgb(0, 0, 0);
+    height: 35px;
+    width: 150px;
+    padding: 0px 8px 0px 8px;
+    border-radius: 8px;
+    margin: 10px 0px 5px 30px;
+    background-color: rgb(180, 180, 180);
+    border: none;
+    outline: none;
+    transition: 0.7s;
+}
+
+.boton-datos:hover {
+    background-color: rgb(158, 158, 158);
+    transition: 0.7s;
+}
+
+.boton-agregar b, .boton-datos b {
+    cursor: pointer;
+}
+
+.boton-agregar {
+    color: rgb(0, 0, 0);
+    height: 35px;
+    width: 150px;
+    padding: 0px 8px 0px 8px;
+    border-radius: 8px;
+    margin: 10px 0px 5px 30px;
+    background-color: rgba(1, 103, 255, 0.527);
+    border: none;
+    outline: none;
+    transition: 0.7s;
+}
+
+.boton-agregar:hover {
+    background-color: rgba(4, 104, 255, 0.795);
+    transition: 0.7s;
+}
+
+.botones-acciones {
+    float: right;
+    margin-left: 10px;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    transition: 0.7s;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.botones-acciones.add{
+    margin-left: 13px;
+    margin-top: 2px;
+}
+
+.botones-acciones .editar {
+    margin-left: 6px;
+    margin-top: 5px;
+    z-index: 3;
+}
+
+.botones-acciones .borrar, .botones-acciones .add{
+    margin-left: 5px;
+    margin-top: 5px;
+    z-index: 3;
+}
+
+.botones-acciones:hover {
+    background-color: rgb(232, 236, 236);
+    transition: 0.7s;
+}
+
+
+/* C U E R P O S */
+
+.cuerpo.banner{
+    margin-top: 90px;
+}
+
+.cuerpo {
+    padding-left: 40px;
+    padding-right: 120px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    background-color: rgb(232, 236, 236);
+    transition: 0.8s;
+}
+
+.cuerpo.datos-personales {
+    padding-left: 230px;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.cuerpo.acerca-de:hover, .cuerpo.experiencia:hover, .cuerpo.educacion:hover, .cuerpo.skills:hover, .cuerpo.proyectos:hover {
+    background-color: rgba(209, 211, 211, 0.863);
+    transition: 0.8s;   
+    padding-left: 50px; 
+}
+
+.cuerpo.datos-personales:hover {
+    background-color: rgba(209, 211, 211, 0.863);
+    transition: 0.6s;   
+    padding-left: 235px; 
+}
+
+.cuerpo.datos-personales:hover h1 {
+    background-position: left;
+}
+
+.cuerpo.acerca-de:hover h2, .cuerpo.experiencia:hover h2, .cuerpo.educacion:hover h2, .cuerpo.skills:hover h2, .cuerpo.proyectos:hover h2 {
+    background-position: left;
+}
+
+.acerca-de, .experiencia, .educacion, .skills , .proyectos {
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+.img-estudios {
+    margin-right: 20px;
+    width: 200px;
+    float: left;
+    border-radius: 10px;
+}
+
+.fechas {
+    font-size: small;
+    color: rgb(82, 82, 82);
+}
+
+p a.certificado {
+    font-size: small;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgba(134, 134, 255, 0.767);
+    transition: 0.7s;
+}
+
+p a.certificado:hover, p a:hover  {
+    color: rgb(58, 58, 247);
+    transition: 0.7s;
+}
+
+.proyectos {
+    margin-bottom: 20px;
+}
+
+.cuerpo h2 {
+    margin-bottom: 15px;
+}
+
+.cuerpo p {
+    margin: 3px 45px 10px 20px;
+    text-align: justify;
+}
+
+.skill-nombre {
+    margin: 5px 0px 0px 5px;
+    
+
+}
+
+.skill-barra {
+    width: 75%;
+    height: 30px;
+    margin-top: 2px;
+    background-color: rgba(209, 211, 211, 0.863);
+    border-radius: 8px;
+    transition: 0.7s;
+}
+
+.cuerpo.skills:hover .skill-barra{
+    background-color: rgb(255, 255, 255);
+    transition: 0.7s;
+}
+
+.skill-porcentaje  {
+    height: 30px;
+    border-radius: 8px;
+    transition: 1.5s linear;
+    position: relative;
+    transition: 0.7s;
+}
+
+.skill-porcentaje.hard {
+    background-color: rgba(255, 80, 80, 0.800);
+}
+
+.skill-porcentaje.soft {
+    background-color: rgba(129, 137, 255, 0.900);
+}
+
+.skill-porcentaje::before {
+    content: attr(per);
+    float: right;
+    height: 30px;
+    padding: 2px 5px 2px 5px;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+}
+
+#footer {
+    text-align: right;
+    padding-top: 12px;
+    height: 50px;
+    background-color: darkgrey;
+    color: black;   
+    transition: 0.7s;
+}
+
+#footer:hover {
+    background-color: rgb(160, 160, 160);
+    padding-right: 50px;
+    transition: 0.6s;
+}
