@@ -1,23 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Send+Flowers&display=swap');
-
 * {
     box-sizing: border-box;
     font-family: 'Playfair Display', serif;
 }
-
 body {
     background-color: #be7cfc !important;
 }
-
 a svg {
     color: #dddbdb;
 }
-
 p, h1, h2, h4, h5, h6, span, b{
     cursor: default;
 }
-
-h2 {
+#nombre {
+    float: left;
+    padding: 4px 5px 9px 5px;
+    border-radius: 10px;
+    /* "to left" / "to right" - affects initial color */
+    background: linear-gradient(to left, rgba(209, 211, 211, 0.863) 50%, rgba(143, 143, 143, 0.5) 50%) right;
+    background-size: 200%;
+    transition: .6s ease-out;
+}
+.titulo-de-seccion {
     padding: 3px 7px 3px 7px;
     border-radius: 10px;
     /* "to left" / "to right" - affects initial color */
@@ -25,46 +29,26 @@ h2 {
     background-size: 201%;
     transition: .6s ease-out;
 }
-
-h1 {
-    padding: 0px 5px 8px 5px;
-    border-radius: 10px;
-    /* "to left" / "to right" - affects initial color */
-    background: linear-gradient(to left, rgba(209, 211, 211, 0.863) 50%, rgba(143, 143, 143, 0.5) 50%) right;
-    background-size: 200%;
-    transition: .6s ease-out;
-}
-
-h6 {
-    height: 20px;
-}
-
 .dato {
     padding-bottom: 2px;
 }
-
 .dato p {
     padding-left: 15px;
     padding-top: 2px;
 }
-
 p {
     margin-right: 10px !important;
     width: 95%;
 }
-
 p a {
-    text-decoration: none;
-    
+    text-decoration: none;    
     color: rgba(99, 99, 252, 0.767);
     transition: 0.7s;
 }
-
 .datos-y-banner {
     border-radius: 30px;
     padding: 0px !important;
 }
-
 .header {
     background-color: black;
     border-bottom: 3px solid rgb(235, 232, 232) !important;
@@ -73,30 +57,26 @@ p a {
     z-index: 900;   
     top: 0px; 
 }
-
 #logos {
     display: flex;
     float: left;
 }
-
 #logos img {
     height: 70px;
 }
-
 #linked-in {
+    float: left;
     margin-right: 25px;
-    height: 35px;
+    height: 26px;
     border-radius: 4px; 
-    margin-top: -1px;
+    margin-top: 4px;
     cursor: pointer;
 }
-
 [data-title]:hover:after {
     opacity: 1;
     transition: 0.3s;
     visibility: visible;
 }
-
 [data-title]:after {
     content: attr(data-title);
     background-color: rgba(223, 222, 222, 0.952);
@@ -106,8 +86,8 @@ p a {
     font-family: 'Playfair Display', serif;
     position: absolute;
     padding: 1px 12px;
-    top: 20px;
-    left: 80%;
+    top: 25px;
+    left: 40%;
     white-space: nowrap;
     opacity: 0;
     border: none;
@@ -115,15 +95,13 @@ p a {
     visibility: hidden;
     border-radius: 3px;
 }
-
 [data-title] {
     position: relative;
-}
-    
+}   
 #log-in, #crear-cuenta {
     background-color: rgb(0, 0, 0);
     color:rgb(235, 235, 235);
-    float: right;
+    float: left;
     padding: 4px 10px;
     border: none;
     border-radius: 8px;
@@ -134,10 +112,9 @@ p a {
     font-weight: bolder;
     margin-bottom: 18px;
 }
-
 #config {
     color:rgb(235, 235, 235);
-    float: right;
+    float: left;
     padding: 2px 10px 4px 10px;
     border: none;
     height: 30px;
@@ -146,27 +123,22 @@ p a {
     transition: 0.5s;
     margin-right: 20px;
 }
-
 #log-in:hover, #crear-cuenta:hover, #config:hover {
     background-color: rgba(179, 179, 179, 0.356);
     transition: 0.7s;
     font-weight: bold;
-    
 }
-
 .form-control-color {
     float: right;
     margin-right: 20px;
     margin-top: -3px !important;
 }
-
 .banner {
     height: 175px;
     background-image: url("../img/kandinsky.jpg");   
     background-size: cover;
     border-radius: 30px 30px 0px 0px;
 }
-
 #foto-perfil {
     float: left;
     width: 200px;
@@ -176,29 +148,37 @@ p a {
     border: 3px solid rgb(209, 209, 209);
     position: relative;
 }
+#foto-perfil-y-boton {
+    display: flex;
+}
 
 
 /* B O T O N E S */
 
+button {
+    outline: none;
+}
 .dropdown-item b {
     cursor: pointer;
 }
-
 .dropdown-item {
     text-align: right !important;
 }
-
+.subir-foto {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0;
+}
 #botones-usuario {
     float: right;
     padding-top: 20px;
+    overflow: hidden;
 } 
-
-#editar:hover {
+#editar-perfil:hover {
     background-color: rgb(190, 186, 186);
     transition: 0.5s;
 }
-
-#editar {
+#editar-perfil {
     border-radius: 50%;
     margin-top: 190px;
     margin-left: -51px;
@@ -207,8 +187,8 @@ p a {
     background-color: rgb(209, 209, 209);
     z-index: 2;
     transition: 0.5s;
+    cursor: pointer;
 }
-
 #editar-portada {
     border-radius: 50%;
     height: 34px;
@@ -219,19 +199,20 @@ p a {
     background-color: rgb(209, 209, 209);
     z-index: 2;
     transition: 0.5s;
+    cursor: pointer;
 }
-
 #editar-portada:hover {
     background-color: rgb(190, 186, 186);
     transition: 0.5s;
 }
-
 #boton-editar-foto {
     position: relative;
-    left:9px;
+    left: 9px;
     top: 7px;
 }
-
+.boton.datos-personales, .boton.agregar-seccion{
+    float: left;
+}
 .boton-datos {
     color: rgb(0, 0, 0);
     height: 35px;
@@ -244,16 +225,13 @@ p a {
     outline: none;
     transition: 0.7s;
 }
-
 .boton-datos:hover {
     background-color: rgb(158, 158, 158);
     transition: 0.7s;
 }
-
 .boton-agregar b, .boton-datos b {
     cursor: pointer;
 }
-
 .boton-agregar {
     color: rgb(0, 0, 0);
     height: 35px;
@@ -266,7 +244,6 @@ p a {
     outline: none;
     transition: 0.7s;
 }
-
 .boton-agregar:hover {
     background-color: rgba(4, 104, 255, 0.795);
     transition: 0.7s;
@@ -292,23 +269,45 @@ p a {
     margin-left: 6px;
     margin-top: 5px;
     z-index: 3;
+    height: 25px;
+    width: 25px;
 }
 
 .botones-acciones .borrar, .botones-acciones .add{
     margin-left: 5px;
     margin-top: 5px;
     z-index: 3;
+    height: 25px;
+    width: 25px;
 }
 
 .botones-acciones:hover {
     background-color: rgb(232, 236, 236);
     transition: 0.7s;
 }
-
+.color-picker {
+    height: 100px;
+    width: 300px;
+    border: none;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}    
+.ingresar-porcentaje{
+    margin-left: 10px;
+}
 
 /* C U E R P O S */
 
-.cuerpo.banner{
+.contenedor, .contenedor-datos {
+    overflow: hidden;
+    display: flex;
+}
+
+.contenedor-educacion {
+    overflow: hidden;
+}
+
+.cuerpo.banner {
     margin-top: 90px;
 }
 
@@ -341,28 +340,24 @@ p a {
 .cuerpo.datos-personales:hover h1 {
     background-position: left;
 }
-
 .cuerpo.acerca-de:hover h2, .cuerpo.experiencia:hover h2, .cuerpo.educacion:hover h2, .cuerpo.skills:hover h2, .cuerpo.proyectos:hover h2 {
     background-position: left;
 }
-
 .acerca-de, .experiencia, .educacion, .skills , .proyectos {
     margin-top: 20px;
     border-radius: 30px;
 }
-
 .img-estudios {
     margin-right: 20px;
-    width: 200px;
+    width: 20%;
+    height: 100%;
     float: left;
     border-radius: 10px;
 }
-
 .fechas {
     font-size: small;
     color: rgb(82, 82, 82);
 }
-
 p a.certificado {
     font-size: small;
     font-weight: bold;
@@ -370,31 +365,29 @@ p a.certificado {
     color: rgba(134, 134, 255, 0.767);
     transition: 0.7s;
 }
-
 p a.certificado:hover, p a:hover  {
     color: rgb(58, 58, 247);
     transition: 0.7s;
 }
-
 .proyectos {
     margin-bottom: 20px;
 }
-
 .cuerpo h2 {
     margin-bottom: 15px;
 }
-
 .cuerpo p {
     margin: 3px 45px 10px 20px;
     text-align: justify;
 }
-
-.skill-nombre {
-    margin: 5px 0px 0px 5px;
-    
-
+.item-educacion {
+    overflow: hidden;
 }
-
+.cuerpo-item-educacion {
+    display: flex;
+}
+.skill-nombre {
+    margin: 5px 0px 0px 5px; 
+}
 .skill-barra {
     width: 75%;
     height: 30px;
@@ -403,12 +396,10 @@ p a.certificado:hover, p a:hover  {
     border-radius: 8px;
     transition: 0.7s;
 }
-
 .cuerpo.skills:hover .skill-barra{
     background-color: rgb(255, 255, 255);
     transition: 0.7s;
 }
-
 .skill-porcentaje  {
     height: 30px;
     border-radius: 8px;
@@ -416,15 +407,12 @@ p a.certificado:hover, p a:hover  {
     position: relative;
     transition: 0.7s;
 }
-
 .skill-porcentaje.hard {
     background-color: rgba(255, 80, 80, 0.800);
 }
-
 .skill-porcentaje.soft {
     background-color: rgba(129, 137, 255, 0.900);
 }
-
 .skill-porcentaje::before {
     content: attr(per);
     float: right;
@@ -434,7 +422,6 @@ p a.certificado:hover, p a:hover  {
     background-color: black;
     color: white;
 }
-
 #footer {
     text-align: right;
     padding-top: 12px;
@@ -443,9 +430,262 @@ p a.certificado:hover, p a:hover  {
     color: black;   
     transition: 0.7s;
 }
-
 #footer:hover {
     background-color: rgb(160, 160, 160);
     padding-right: 50px;
     transition: 0.6s;
+}
+
+@media all and (max-width:1199px){
+    #nombre {
+        font-size: 29px !important;
+        transition: 0s;
+        padding: 5px 5px 10px 5px;
+        margin-top: 3px !important;
+    }
+}
+@media all and (max-width:1023px){
+    .cuerpo {
+        padding-right: 60px;
+    }   
+    p {
+        width: 90%;
+    }
+    #editar-portada {
+        margin-right: -30px;
+    }
+    #nombre {
+        margin-top: 10px;    
+    }
+    .boton-datos, .boton-agregar {
+        height: 30px;
+        width: 130px;
+        padding: 0px;
+        margin: 5px 0px 0px 7px;
+    }  
+    .boton.datos-personales {
+        font-size: 15px;
+        float: left;
+    }
+    .boton.agregar-seccion {
+        font-size: 15px;
+        float: none;
+    }
+    .botones-acciones{
+        margin-left: 8px;
+    }
+    .skill-barra {
+        margin-top: 4px;
+        width: 75%;
+        height: 25px;
+    }    
+    .skill-porcentaje  {
+        height: 25px;
+    }
+    .skill-porcentaje::before {
+        height: 25px;
+        padding-top: 0px;
+    }
+}
+@media all and (max-width: 767px) {      
+    #nombre {          
+        font-size: 20px !important;
+        position: absolute;
+    }
+    .titulo-de-seccion {
+        font-size: 15px;
+        padding-bottom: 3px;
+    }
+    h5{
+       font-size: 14px !important; 
+    }
+    .datos-y-banner {
+        margin-top: 145px;
+    }
+    .container {
+        max-width: 98% !important;
+    }
+    #linked-in {
+        margin: 12px 25px 0px 20px !important;
+        height: 20px;
+    }
+    #logos img {
+        margin-top: 2px;
+        height: 50px;
+    }
+    #logos {
+        float: right;
+        margin-right: 20px;
+    }
+    [data-title]:after {
+        font-size: 10px;
+        top: 20px;
+        left: 10%;
+    }
+    #botones-usuario {
+        float: right;
+        padding-top: 7px;
+        margin-bottom: 8px;
+    }
+    #log-in, #crear-cuenta {     
+        font-size: 12px;
+        margin: 5px 5px 0px 5px;  
+    }
+    #config {
+        margin: 5px 10px 0px 5px;  
+    }        
+    .banner {
+        height: 100px;
+    }  
+    .cuerpo.banner {
+        margin-top: -25px;
+    }  
+    .cuerpo.datos-personales {
+        padding-left: 160px;
+        padding-top: 10px;
+    }
+    .cuerpo.datos-personales:hover {
+        padding-left: 165px; 
+    }
+    .boton-datos, .boton-agregar {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+    .boton-datos {
+        width: 90px;
+        height: 25px;
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+    .boton-agregar{
+        width: 90px;
+        height: 25px;
+        margin-left: 0px;
+    }    
+    .cuerpo {
+        padding: 15px 30px 20px 20px;
+    }
+    .cuerpo.acerca-de:hover, .cuerpo.experiencia:hover, .cuerpo.educacion:hover, .cuerpo.skills:hover, .cuerpo.proyectos:hover {   
+        padding-left: 25px; 
+    }
+    .cuerpo p {
+        margin: 3px 0px 10px 5px !important;
+        text-align: justify;
+        font-size: 12px;
+    }
+    #foto-perfil {
+        width: 130px;
+        height: 130px;
+        margin-top: 5px;
+        margin-left: 0px;
+    }   
+    #editar-perfil {    
+        margin-top: 110px;
+        margin-left: -40px;
+        width: 24px;
+        height: 24px;
+    }
+    #editar-portada {
+        margin-top: 74px;
+        margin-right: -15px; 
+        height: 24px;
+        width: 24px;
+    }
+    #boton-editar-foto {
+        left: 4px;
+        top: 2px;
+    }
+    .botones-acciones {
+        margin-left: 8px;
+        height: 25px;
+        width: 25px;
+    }
+    .botones-acciones.add{
+        margin-left: 5px;
+        margin-top: 0px;
+    }   
+    .botones-acciones .editar {
+        margin-left: 4px;
+        margin-top: 0px;
+        margin-bottom: 2px;
+        height: 18px;
+        width: 18px;
+    }
+    .botones-acciones .borrar, .botones-acciones .add{
+        margin-left: 4px;
+        margin-top: 0px;
+        margin-bottom: 2px;
+        height: 18px;
+        width: 18px;
+    }
+    .skill-nombre {
+        font-size: 12px;
+    }
+    .skill-barra {
+        margin-top: 3px;
+        width: 85%;
+        height: 23px;
+    }
+    .skill-porcentaje  {
+        height: 23px;
+    }
+    .skill-porcentaje::before {
+        height: 23px;
+        padding: 0px 5px 0px 5px;
+    }
+    .cuerpo.proyectos {
+        padding-right: 20px;
+    }
+    .proyectos-item{
+        width: 200px;
+    }
+    #footer {
+        font-size: 12px;
+    }
+    #footer:hover {
+        padding-right: 20px;
+    } 
+}
+@media all and (max-width: 424px) {
+    .container {
+        max-width: 100% !important;
+    }   
+    #logos img{
+        width: 100%;
+        padding-left: 40px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    #logos {
+        float: none;
+    }
+    #botones-usuario {
+        width: 100%;
+        padding-top: 7px;
+        padding-left: 27px;
+        margin-bottom: 8px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .cuerpo.datos-personales {
+        padding-left: 150px;
+        padding-top: 10px;
+    }
+    .cuerpo.datos-personales:hover {
+        padding-left: 155px; 
+    }
+    .cuerpo.proyectos > p{
+        margin-right: 0px !important;
+    }
+    .skill-barra {
+        width: 80%;
+        height: 21px;
+    }
+    .skill-porcentaje  {
+        height: 21px;
+    }
+    .skill-porcentaje::before {
+        height: 21px;
+        padding: 0px 5px 0px 5px;
+    }
 }
