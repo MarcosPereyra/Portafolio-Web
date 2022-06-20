@@ -207,8 +207,9 @@ button {
 }
 #boton-editar-foto {
     position: relative;
-    left: 9px;
-    top: 7px;
+    left: 2px;
+    top: 1px;  
+    width: 30px;  
 }
 .boton.datos-personales, .boton.agregar-seccion{
     float: left;
@@ -443,6 +444,10 @@ p a.certificado:hover, p a:hover  {
         padding: 5px 5px 10px 5px;
         margin-top: 3px !important;
     }
+
+    #logos {
+        float: left !important;
+    }
 }
 @media all and (max-width:1023px){
     .cuerpo {
@@ -473,7 +478,7 @@ p a.certificado:hover, p a:hover  {
     }
     .botones-acciones{
         margin-left: 8px;
-    }
+    } 
     .skill-barra {
         margin-top: 4px;
         width: 75%;
@@ -506,7 +511,7 @@ p a.certificado:hover, p a:hover  {
         max-width: 98% !important;
     }
     #linked-in {
-        margin: 12px 25px 0px 20px !important;
+        margin: 9px 5px 0px 20px !important;
         height: 20px;
     }
     #logos img {
@@ -536,6 +541,14 @@ p a.certificado:hover, p a:hover  {
     }        
     .banner {
         height: 100px;
+    }
+    .cuerpo.banner {
+        margin-top: -73px !important;
+    }
+    #boton-editar-foto {
+        left: 2px !important;
+        top: -2px !important;  
+        width: 20px;  
     }  
     .cuerpo.banner {
         margin-top: -25px;
@@ -646,26 +659,24 @@ p a.certificado:hover, p a:hover  {
         padding-right: 20px;
     } 
 }
-@media all and (max-width: 424px) {
+
+@media all and (max-width: 426px) {
     .container {
         max-width: 100% !important;
     }   
     #logos img{
-        width: 100%;
-        padding-left: 40px;
-        display: flex;
-        flex-wrap: nowrap;
+        padding-left: 30px;
     }
-    #logos {
-        float: none;
+    #logos div {
+        padding-left: 20px;
     }
-    #botones-usuario {
+    #botones-usuario {    
         width: 100%;
-        padding-top: 7px;
-        padding-left: 27px;
-        margin-bottom: 8px;
-        display: flex;
-        flex-wrap: nowrap;
+        padding-left: 20px;
+        margin-bottom: 8px;        
+    }
+    #botones-usuario a, #botones-usuario button, #botones-usuario div {
+        padding-left: 20px;
     }
     .cuerpo.datos-personales {
         padding-left: 150px;
@@ -677,15 +688,30 @@ p a.certificado:hover, p a:hover  {
     .cuerpo.proyectos > p{
         margin-right: 0px !important;
     }
+    .cuerpo.banner {
+        margin-top: -20px !important;
+    }
     .skill-barra {
         width: 80%;
-        height: 21px;
+        height: 23px;
     }
     .skill-porcentaje  {
-        height: 21px;
+        height: 23px;
     }
     .skill-porcentaje::before {
-        height: 21px;
-        padding: 0px 5px 0px 5px;
+        height: 23px;
+        padding: -5px 5px 0px 5px;
+    }
+}
+
+@media all and (max-width: 376px) {
+    #logos img{
+        padding-left: 15px;
+    }
+    #botones-usuario {    
+        padding-left: 25px;        
+    }
+    #botones-usuario a, #botones-usuario button, #botones-usuario div {
+        padding-left: 10px;
     }
 }
