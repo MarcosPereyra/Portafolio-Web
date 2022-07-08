@@ -1,0 +1,143 @@
+<!-- BANNER Y FOTO DE PERFIL -->
+<div>
+    <div class="datos-y-banner">
+        <div class="cuerpo banner">
+            <!-- BANNER -->
+            <div id="editar-portada" data-bs-toggle="modal" data-bs-target="#staticBackdropFotoPortada">  
+                <button class="subir-foto">
+                    <img id="boton-editar-foto" src="../../../assets/imágenes/foto.jpg">
+                </button>
+            </div>
+            <!-- MODAL - FOTO DE PORTADA -->
+            <div class="modal fade" id="staticBackdropFotoPortada" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-title"><b>FOTO DE PORTADA</b></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="mb-3">
+                                    <label for="validationDefault01" class="form-label"><b>SELECCIONAR FOTO</b></label>
+                                    <input type="file" class="form-control" id="validationDefault01" required>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FOTO DE PERFIL -->
+            <div>
+                <div id="foto-perfil-y-boton">
+                    <img id="foto-perfil" src="../../../assets/imágenes/foto_prefil.jpg" alt="Foto de perfil">       
+                    <div id="editar-perfil" data-bs-toggle="modal" data-bs-target="#staticBackdropFotoPerfil">  
+                        <button class="subir-foto">
+                            <img id="boton-editar-foto" src="../../../assets/imágenes/foto.jpg">
+                        </button>
+                    </div>
+                    <!-- MODAL - FOTO DE PERFIL -->
+                    <div class="modal fade" id="staticBackdropFotoPerfil" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal-title"><b>FOTO DE PERFIL</b></h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="">
+                                        <div class="mb-3">
+                                            <label for="validationDefault01" class="form-label"><b>SELECCIONAR FOTO</b></label>
+                                            <input type="file" class="form-control" id="validationDefault01" required>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <!-- NOMBRE Y BOTONES DE DATOS PERSONALES Y AGREGAR SECCIÓN -->    
+        <div class="cuerpo datos-personales">
+            <div class="contenedor-datos">
+                <h1 id="nombre">Marcos Pereyra</h1>
+                <!-- BOTÓN - DATOS PERSONALES -->
+                <div class="contenedor-botones-datos-y-agregar">
+                    <div class="boton datos-personales">
+                        <button type="button" class="boton-datos" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <b>datos personales</b>
+                        </button>        
+                        <!-- MODAL - DATOS PERSONALES -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">                                       
+                                <div class="modal-header">
+                                    <h5 class="modal-title nombre" id="staticBackdropLabel"><b>DATOS PERSONALES</b></h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="dato">
+                                        <h6><b>FECHA DE NACIMIENTO</b></h6>
+                                        <p><b>10/07/1996</b></p>
+                                    </div>
+                                    <hr>
+                                    <div class="dato">
+                                        <h6><b>DOMICILIO</b></h6>
+                                        <p><b>Villa Crespo, CABA</b></p>
+                                    </div>
+                                    <hr>
+                                    <div class="dato">
+                                        <h6><b>TELÉFONO</b></h6>
+                                        <p><b>1165052634</b></p>
+                                    </div>
+                                    <hr>
+                                    <div class="dato">
+                                        <h6><b>CORREO ELECTRÓNICO</b></h6>
+                                        <p><b>marcospereyra.1807@gmail.com</b></p>
+                                    </div>
+                                    <hr>
+                                    <div class="dato">
+                                        <h6><b>IDIOMAS</b></h6>
+                                        <p><b>Inglés (intermedio)</b></p>
+                                        <p><b>Francés (básico)</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- BOTÓN - AGREGAR SECCIÓN -->
+                    <div class="boton agregar-seccion">
+                        <button class="boton-agregar" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                            <b>agregar sección</b>
+                        </button>
+                        <!-- MODAL - AGREGAR SECCIÓN -->
+                        <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modal-title"><b>NUEVA SECCIÓN</b></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="">
+                                            <div class="mb-3">
+                                                <label for="validationDefault01" class="form-label"><b>TÍTULO</b></label>
+                                                <input type="text" class="form-control" id="validationDefault01" required>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-secondary" type="submit">agregar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                  
+                </div>                                
+            </div>                                
+        </div>
+    </div>
+</div>

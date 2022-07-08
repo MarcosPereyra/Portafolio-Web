@@ -1,0 +1,87 @@
+{
+    "nombre": "Marcos Pereyra",
+    "nacimiento": "10/07/1996",
+    "domicilio": "Villa Crespo, CABA",
+    "telefono": "1165052634",
+    "correo electrónico": "marcospereyra.1807@gmail.com",
+    "idiomas": {
+        "idioma1": "Inglés (intermedio)",
+        "idioma2": "Francés (básico)"
+    },
+
+    "imagen-banner": "",
+    "acerca-de": "Full Stack Developer Jr. Estudiando programación desde comienzos de 2021, tanto en Frontend como Backend. También soy músico y escritor.",
+
+    "experiencia": "He desarrollado de forma autodidacta algunos proyectos de Frontend -una página web utilizando HTML, CSS y JavaScript- y Backend -programas que simulan un sistema bancario, una billetera virtual, entre otros-. Me gustaría trabajar en un ambiente laboral formal para poder seguir formándome.",
+
+    "educacion": {
+        "educacion1": {
+            "foto": "",
+            "instituto": "Escuela Técnica ORT",
+            "titulo": "Bachiller Técnico con orientación en Producción Musical (Graduado con honores - Abanderado)",
+            "periodo": "marzo 2009 - diciembre 2014",
+            "certificado": ""
+        },
+        "educacion2": {
+            "foto": "",
+            "instituto": "Universidad Tecnológica Nacional",
+            "titulo": "Fundamentos de la Programación",
+            "periodo": "enero 2021 - abril 2021",
+            "certificado": ""
+        },
+        "educacion3": {
+            "foto": "",
+            "instituto": "Universidad Tecnológica Nacional",
+            "titulo": "Desarrollo Web con JavaScript",
+            "periodo": "abril 2021 - junio 2021",
+            "certificado": ""
+        },
+        "educacion4": {
+            "foto": "",
+            "instituto": "Ministerio de Desarrollo Productivo",
+            "titulo": "Argentina Programa: #SéProgramar",
+            "periodo": "octubre 2021 - diciembre 2021",
+            "certificado": ""
+        },
+        "educacion5": {
+            "foto": "",
+            "instituto": "Ministerio de Desarrollo Productivo",
+            "titulo": "Argentina Programa: #YoProgramo",
+            "periodo": "febrero 2022 - agosto 2022",
+            "certificado": ""
+        }
+    },
+
+    "skills": {
+        "html": "70",
+        "css": "60",
+        "angular": "20",
+        "javascript": "60",
+        "java": "70",
+        "sql": "80",
+        "springboot": "50",
+        "iniciativa": "80",
+        "trabajo-en-equipo": "100",
+        "adaptacion": "80"
+    },
+
+    "proyectos": {
+        "proyecto1": {
+            "descripcion": "Portafolio Web (proyecto final - Argentina Programa)",
+            "link": null
+        },
+        "proyecto2": {
+            "descripcion": "Página Web (proyecto final - UTN)",
+            "link": ""
+        },
+        "proyecto3": {
+            "descripcion": "Perfil de GitHub",
+            "link": ""
+        }
+    }
+
+    
+}
+
+
+
